@@ -71,8 +71,7 @@
 		6C12C9772A98AE4200386E1F /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
-				6C12C98F2A98AF1800386E1F /* FeedItem.swift */,
-				6C12C9912A98B0E100386E1F /* FeedLoader.swift */,
+				6C12C9942A98B32A00386E1F /* Feed Feature */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -83,6 +82,15 @@
 				6C12C9842A98AE4200386E1F /* EssentialFeedTests.swift */,
 			);
 			path = EssentialFeedTests;
+			sourceTree = "<group>";
+		};
+		6C12C9942A98B32A00386E1F /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6C12C98F2A98AF1800386E1F /* FeedItem.swift */,
+				6C12C9912A98B0E100386E1F /* FeedLoader.swift */,
+			);
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
