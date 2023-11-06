@@ -39,8 +39,8 @@ class TestFeedUseCaseTests: XCTestCase {
     
     func test_save_requestsCacheDeletion() {
         let (sut, store) = makeSUT()
-        
         let items = [uniqueItem(), uniqueItem()]
+        
         sut.save(items)
         
         XCTAssertEqual(store.deleteCachedFeedCallCount, 1)
