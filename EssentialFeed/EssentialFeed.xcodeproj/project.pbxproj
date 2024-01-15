@@ -120,6 +120,7 @@
 		6CE24FB72AF91A5800F1AEFB /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		6CE24FBA2AFA653600F1AEFB /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		6CE24FBC2AFA65EF00F1AEFB /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
+		6CF81A7C2B551C62000CCA74 /* UX goals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UX goals.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +181,7 @@
 				6C13DBD92B1DC5CA004E7B23 /* EssentialFeedCacheIntegrationTests.xctestplan */,
 				6C66BAB72AB08C2A00CE8FA9 /* EssentialFeed.xctestplan */,
 				6C6775672AB34026001F265F /* CITestPlan.xctestplan */,
+				6CF81A7C2B551C62000CCA74 /* UX goals.png */,
 				6C12C9772A98AE4200386E1F /* EssentialFeed */,
 				6C12C9832A98AE4200386E1F /* EssentialFeedTests */,
 				6C66BABD2AB1955500CE8FA9 /* EssentialFeedAPIEndToEndTests */,
