@@ -10,6 +10,8 @@ import EssentialFeed
 
 final public class FeedViewController: UITableViewController {
     
+    private var viewAppeared = false
+    
     private var loader: FeedLoader?
     
     public convenience init(loader: FeedLoader) {
@@ -22,7 +24,14 @@ final public class FeedViewController: UITableViewController {
         
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
-        load()
+    }
+    
+    public override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        if !viewAppeared {
+            load()
+            viewAppeared = true
+        }
     }
     
     @objc private func load() {
