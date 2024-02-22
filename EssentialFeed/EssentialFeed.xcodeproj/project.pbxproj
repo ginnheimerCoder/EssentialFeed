@@ -163,6 +163,7 @@
 		6CA9AC272B87966F0075F8F6 /* FeedViewControllerTests+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+localized.swift"; sourceTree = "<group>"; };
 		6CA9AC2A2B87976A0075F8F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		6CA9AC2C2B8797900075F8F6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		6CA9AC2D2B8797C90075F8F6 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		6CAEB30C2B0B9B3C00F2339F /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		6CAEB30E2B0B9BE200F2339F /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		6CBB10202B186F8D00702AAF /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
@@ -669,6 +670,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = 6C12C96B2A98AE4200386E1F;
 			productRefGroup = 6C12C9762A98AE4200386E1F /* Products */;
@@ -862,6 +864,7 @@
 			children = (
 				6CA9AC2A2B87976A0075F8F6 /* en */,
 				6CA9AC2C2B8797900075F8F6 /* pt-BR */,
+				6CA9AC2D2B8797C90075F8F6 /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
