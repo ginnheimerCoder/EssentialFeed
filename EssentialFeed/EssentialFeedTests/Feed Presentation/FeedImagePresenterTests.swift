@@ -27,9 +27,11 @@ struct FeedImageViewModel {
 final class FeedImagePresenter {
     
     let view: FeedImageView
+    private let imageTransformer: (Data) -> Any?
     
-    init(view: FeedImageView) {
+    internal init(view: FeedImageView, imageTransformer: @escaping (Data) -> Any?) {
         self.view = view
+        self.imageTransformer = imageTransformer
     }
     
     func didStartLoadingImageData(for model: FeedImage) {
@@ -39,6 +41,18 @@ final class FeedImagePresenter {
                 location: model.location,
                 image: nil,
                 isLoading: true,
+                shouldRetry: false
+            )
+        )
+    }
+    
+    func didFinishLoadingImageData(with data: Data, for model: FeedImage) {
+        view.display(
+            FeedImageViewModel(
+                description: model.description,
+                location: model.location,
+                image: imageTransformer(data),
+                isLoading: false,
                 shouldRetry: false
             )
         )
@@ -54,7 +68,7 @@ final class FeedImagePresenterTests: XCTestCase {
         XCTAssertTrue(view.messages.isEmpty, "Exprected no view messages")
     }
     
-    func test_didStartLoadingImageData_displaysNoErrorLoadingIndicatorAndNoImage() {
+    func test_didStartLoadingImageData_displaysLoadingImage() {
         let (sut, view) = makeSUT()
         let feedImage = uniqueImage()
         
@@ -68,11 +82,26 @@ final class FeedImagePresenterTests: XCTestCase {
         XCTAssertFalse(view.messages.first!.shouldRetry)
     }
     
+    func test_didFinishLoadingImageData_displaysRetryOnFailedImageTransformation() {
+        let (sut, view) = makeSUT(imageTransformer: { _ in nil })
+        let feedImage = uniqueImage()
+        let data = Data()
+        
+        sut.didFinishLoadingImageData(with: data, for: feedImage)
+        
+        XCTAssertEqual(view.messages.count, 1)
+        XCTAssertEqual(view.messages.first!.location, feedImage.location)
+        XCTAssertEqual(view.messages.first!.description, feedImage.description)
+        XCTAssertFalse(view.messages.first!.isLoading)
+        XCTAssertNil(view.messages.first!.image)
+        XCTAssertFalse(view.messages.first!.shouldRetry)
+    }
+    
     // MARK: - Helpers
     
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter, view: ViewSpy) {
+    private func makeSUT(imageTransformer: @escaping (Data) -> Any? = { _ in nil }, file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter, view: ViewSpy) {
         let view = ViewSpy()
-        let sut = FeedImagePresenter(view: view)
+        let sut = FeedImagePresenter(view: view, imageTransformer: imageTransformer)
         trackForMemoryLeaks(view, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
