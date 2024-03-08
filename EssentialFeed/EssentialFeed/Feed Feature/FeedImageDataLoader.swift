@@ -1,5 +1,5 @@
 //
-//  FeedImageLoader.swift
+//  FeedImageDataLoader.swift
 //  EssentialFeediOS
 //
 //  Created by David Gänshirt on 12.02.24.
