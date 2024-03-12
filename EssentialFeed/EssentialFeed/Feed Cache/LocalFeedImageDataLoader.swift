@@ -34,6 +34,8 @@ public final class LocalFeedImageDataLoader: FeedImageDataLoader {
         case notFound
     }
     
+    public typealias SaveResult = Swift.Result<Void, Error>
+    
     private let store: FeedImageDataStore
     
     public init(store: FeedImageDataStore) {
@@ -53,6 +55,10 @@ public final class LocalFeedImageDataLoader: FeedImageDataLoader {
             )
         }
         return task
+    }
+    
+    public func save(_ data: Data, for url: URL, completion: @escaping (SaveResult) -> Void) {
+        store.insert(data, for: url) { _ in }
     }
     
 }
