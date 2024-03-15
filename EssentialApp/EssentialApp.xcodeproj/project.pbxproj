@@ -20,6 +20,7 @@
 		6CC6FFEE2BA4540A0062E39B /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6FFED2BA4540A0062E39B /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		6CC6FFF02BA467560062E39B /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6FFEF2BA467560062E39B /* FeedLoaderWithFallbackComposite.swift */; };
 		6CC6FFF22BA4787C0062E39B /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6FFF12BA4787C0062E39B /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
+		6CC6FFF42BA4937E0062E39B /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6FFF32BA4937E0062E39B /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		6CC6FFED2BA4540A0062E39B /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		6CC6FFEF2BA467560062E39B /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		6CC6FFF12BA4787C0062E39B /* FeedImageDataLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
+		6CC6FFF32BA4937E0062E39B /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				6C0D812E2BA343B7008669B4 /* LaunchScreen.storyboard */,
 				6C0D81312BA343B7008669B4 /* Info.plist */,
 				6CC6FFEF2BA467560062E39B /* FeedLoaderWithFallbackComposite.swift */,
+				6CC6FFF32BA4937E0062E39B /* FeedImageDataLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				6C0D81242BA343B5008669B4 /* AppDelegate.swift in Sources */,
 				6CC6FFF02BA467560062E39B /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				6C0D81262BA343B5008669B4 /* SceneDelegate.swift in Sources */,
+				6CC6FFF42BA4937E0062E39B /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
