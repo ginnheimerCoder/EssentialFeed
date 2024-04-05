@@ -38,9 +38,6 @@
          <TestPlanReference
             reference = "container:../EssentialApp/EssentialApp/EssentialApp.xctestplan">
          </TestPlanReference>
-         <TestPlanReference
-            reference = "container:EssentialApp/EssentialApp/EssentialAppUIAcceptanceTests.xctestplan">
-         </TestPlanReference>
       </TestPlans>
    </TestAction>
    <LaunchAction
