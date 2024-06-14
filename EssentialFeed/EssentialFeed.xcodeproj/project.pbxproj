@@ -410,7 +410,6 @@
 		6C362CAF2B79F2ED00F74142 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6CF81A862B554C63000CCA74 /* ListViewController.swift */,
 				6C362CB72B7A090E00F74142 /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
@@ -422,7 +421,6 @@
 				6CE7AD682B960D260099E7DB /* Helpers */,
 				6C9149E72B624945008FB33D /* FeedImageCell.swift */,
 				6CA9AC1F2B8747C00075F8F6 /* Feed.storyboard */,
-				6CE7AD662B9605EC0099E7DB /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -470,6 +468,7 @@
 		6C9F6E9F2B512131008B9AFD /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				6C9F8C282C1C2C8500C2C56D /* Shared UI */,
 				6C362CAE2B79F2E000F74142 /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -589,6 +588,42 @@
 			path = "Image Comments Presentation";
 			sourceTree = "<group>";
 		};
+		6C9F8C282C1C2C8500C2C56D /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				6C9F8C2A2C1C2CAB00C2C56D /* Views */,
+				6C9F8C292C1C2C9000C2C56D /* Controllers */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		6C9F8C292C1C2C9000C2C56D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6CF81A862B554C63000CCA74 /* ListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6C9F8C2A2C1C2CAB00C2C56D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C9F8C2B2C1C2CC600C2C56D /* Helpers */,
+				6CE7AD662B9605EC0099E7DB /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C9F8C2B2C1C2CC600C2C56D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6CA9AC212B87585D0075F8F6 /* UITableView+DequeueReusing.swift */,
+				6CE7AD6B2B960FE70099E7DB /* UIRefreshControl+Helpers.swift */,
+				6CAC3D7A2BC4295E00B1F28E /* UITableView+HeaderSizing.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6CAC3D772BC4264600B1F28E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,10 +724,7 @@
 			isa = PBXGroup;
 			children = (
 				6C9149E92B626E8C008FB33D /* UIView+Shimmering.swift */,
-				6CA9AC212B87585D0075F8F6 /* UITableView+DequeueReusing.swift */,
 				6CA9AC232B87592B0075F8F6 /* UIImageView+Animations.swift */,
-				6CE7AD6B2B960FE70099E7DB /* UIRefreshControl+Helpers.swift */,
-				6CAC3D7A2BC4295E00B1F28E /* UITableView+HeaderSizing.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
