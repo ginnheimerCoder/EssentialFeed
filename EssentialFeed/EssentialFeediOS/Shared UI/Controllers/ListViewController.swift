@@ -15,13 +15,13 @@ final public class ListViewController: UITableViewController, UITableViewDataSou
     public var onRefresh: (() -> Void)?
     
     private(set) public var errorView = ErrorView()
-
+    
     private lazy var dataSource: UITableViewDiffableDataSource<Int, CellController> = {
         .init(tableView: tableView) { tableView, index, controller in
             controller.dataSource.tableView(tableView, cellForRowAt: index)
         }
     }()
-        
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,7 +79,11 @@ final public class ListViewController: UITableViewController, UITableViewDataSou
         var snapshot = NSDiffableDataSourceSnapshot<Int, CellController>()
         snapshot.appendSections([0])
         snapshot.appendItems(cellControllers, toSection: 0)
-        dataSource.apply(snapshot)
+        if #available(iOS 15.0, *) {
+            dataSource.applySnapshotUsingReloadData(snapshot)
+        } else {
+            dataSource.apply(snapshot)
+        }
     }
     
     public func display(_ viewModel: ResourceErrorViewModel) {
@@ -112,5 +116,5 @@ final public class ListViewController: UITableViewController, UITableViewDataSou
     private func cellController(at indexPath: IndexPath) -> CellController? {
         dataSource.itemIdentifier(for: indexPath)
     }
-
+    
 }
