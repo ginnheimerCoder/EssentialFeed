@@ -1,14 +1,11 @@
-//
-//  ImageCommentCell.swift
-//  EssentialFeediOS
-//
-//  Created by David Gänshirt on 14.06.24.
+//	
+// Copyright © Essential Developer. All rights reserved.
 //
 
 import UIKit
 
 public final class ImageCommentCell: UITableViewCell {
-    @IBOutlet public var messageLabel: UILabel!
-    @IBOutlet public var usernameLabel: UILabel!
-    @IBOutlet public var dateLabel: UILabel!
+	@IBOutlet private(set) public var messageLabel: UILabel!
+	@IBOutlet private(set) public var usernameLabel: UILabel!
+	@IBOutlet private(set) public var dateLabel: UILabel!
 }

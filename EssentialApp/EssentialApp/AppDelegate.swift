@@ -1,12 +1,8 @@
 //
-//  AppDelegate.swift
-//  EssentialApp
-//
-//  Created by David Gänshirt on 14.03.24.
+//  Copyright © Essential Developer. All rights reserved.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {}
-

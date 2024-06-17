@@ -1,12 +1,7 @@
 //
-//  ResourceLoadingViewModel.swift
-//  EssentialFeed
+// Copyright © Essential Developer. All rights reserved.
 //
-//  Created by David Gänshirt on 05.03.24.
-//
-
-import Foundation
 
 public struct ResourceLoadingViewModel {
-    public let isLoading: Bool
+	public let isLoading: Bool
 }

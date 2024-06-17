@@ -1,15 +1,11 @@
 //
-//  UIRefreshControl+TestHelpers.swift
-//  EssentialFeediOSTests
-//
-//  Created by David Gänshirt on 23.02.24.
+//  Copyright © Essential Developer. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIRefreshControl {
-    func simulatePullToRefresh() {
-        simulate(event: .valueChanged)
-    }
+	func simulatePullToRefresh() {
+		simulate(event: .valueChanged)
+	}
 }

@@ -1,16 +1,13 @@
 //
-//  XCTestCase+MemoryLeakTracking.swift
-//  EssentialFeedTests
-//
-//  Created by David Gänshirt on 06.09.23.
+// Copyright © Essential Developer. All rights reserved.
 //
 
 import XCTest
 
 extension XCTestCase {
-    func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
-        addTeardownBlock { [weak instance] in
-            XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
-        }
-    }
+	func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
+		addTeardownBlock { [weak instance] in
+			XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
+		}
+	}
 }

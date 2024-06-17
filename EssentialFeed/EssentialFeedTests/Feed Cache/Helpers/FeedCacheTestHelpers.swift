@@ -1,30 +1,26 @@
 //
-//  FeedCacheTestHelpers.swift
-//  EssentialFeedTests
-//
-//  Created by David Gänshirt on 14.11.23.
+//  Copyright © Essential Developer. All rights reserved.
 //
 
 import Foundation
 import EssentialFeed
 
 func uniqueImage() -> FeedImage {
-    FeedImage(id: UUID(), description: "any", location: "any", url: anyURL())
+	return FeedImage(id: UUID(), description: "any", location: "any", url: anyURL())
 }
 
 func uniqueImageFeed() -> (models: [FeedImage], local: [LocalFeedImage]) {
-    let models = [uniqueImage(), uniqueImage()]
-    let local = models.map { LocalFeedImage(id: $0.id, description: $0.description, location: $0.location, url: $0.url) }
-    return (models, local)
+	let models = [uniqueImage(), uniqueImage()]
+	let local = models.map { LocalFeedImage(id: $0.id, description: $0.description, location: $0.location, url: $0.url) }
+	return (models, local)
 }
 
 extension Date {
-    func minusFeedCacheMaxAge() -> Date {
-        return adding(days: -feedCacheMaxAgeInDays)
-    }
-    
-    private var feedCacheMaxAgeInDays: Int { 7 }
-    
+	func minusFeedCacheMaxAge() -> Date {
+		return adding(days: -feedCacheMaxAgeInDays)
+	}
+	
+	private var feedCacheMaxAgeInDays: Int {
+		return 7
+	}
 }
-
-

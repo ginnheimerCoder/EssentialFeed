@@ -1,12 +1,9 @@
-//
-//  ResourceLoadingView.swift
-//  EssentialFeed
-//
-//  Created by David Gänshirt on 12.06.24.
+//	
+// Copyright © Essential Developer. All rights reserved.
 //
 
 import Foundation
 
 public protocol ResourceLoadingView {
-    func display(_ viewModel: ResourceLoadingViewModel)
+	func display(_ viewModel: ResourceLoadingViewModel)
 }

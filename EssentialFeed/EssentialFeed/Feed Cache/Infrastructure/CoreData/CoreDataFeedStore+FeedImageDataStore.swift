@@ -1,29 +1,27 @@
 //
-//  CoreDataFeedStore+FeedImageDataStore.swift
-//  EssentialFeed
-//
-//  Created by David Gänshirt on 13.03.24.
+//  Copyright © Essential Developer. All rights reserved.
 //
 
 import Foundation
 
 extension CoreDataFeedStore: FeedImageDataStore {
-    
-    public func retrieve(dataForUrl url: URL, completion: @escaping (FeedImageDataStore.RetrievalResult) -> Void) {
-        perform { context in
-            completion(Result {
-                try ManagedFeedImage.first(with: url, in: context)?.data
-            })
-        }
-    }
-    
-    public func insert(_ data: Data, for url: URL, completion: @escaping (FeedImageDataStore.InsertionResult) -> Void) {
-        perform { context in
-            completion(Result {
-                try ManagedFeedImage.first(with: url, in: context)
-                    .map { $0.data = data }
-                    .map(context.save)
-            })
-        }
-    }
+	
+	public func insert(_ data: Data, for url: URL) throws {
+		try performSync { context in
+			Result {
+				try ManagedFeedImage.first(with: url, in: context)
+					.map { $0.data = data }
+					.map(context.save)
+			}
+		}
+	}
+	
+	public func retrieve(dataForURL url: URL) throws -> Data? {
+		try performSync { context in
+			Result {
+				try ManagedFeedImage.data(with: url, in: context)
+			}
+		}
+	}
+	
 }
